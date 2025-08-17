@@ -1,0 +1,13 @@
+@use '../utils/fonts' as *;
+@use '../utils/variables' as *;
+
+body {
+    text-align: center;
+    font-family: $font-family;
+    letter-spacing: 0;
+}
+
+.container {
+    width: 914px;
+    margin: 0 auto;
+}

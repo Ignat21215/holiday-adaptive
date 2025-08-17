@@ -1,0 +1,35 @@
+@use '../utils/fonts' as *;
+@use '../utils/variables' as *;
+
+.header {
+    padding-top: 36px;
+    color: $light-txt-color;
+    background-image: url(../images/bg);
+
+    &__container {
+       display: flex;
+       justify-content: space-between; 
+    }
+
+    &__logo {
+        font-size: 20px;
+        font-weight: 700;
+        letter-spacing: 1px;
+    }
+
+    &__list {
+        display: flex;
+        gap: 3px;
+    }
+
+    &__link {
+        font-size: 14px;
+        font-weight: 700;
+    }
+
+    &__button {
+        padding: 11px 4px 11px 6px;
+        border: 2px solid $light-txt-color;
+        border-radius: 16px;
+    }
+}
