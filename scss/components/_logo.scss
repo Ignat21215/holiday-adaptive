@@ -1,0 +1,16 @@
+@use "../utils/fonts" as *;
+@use "../utils/variables" as *;
+@use "../utils/placeholders" as *;
+
+.logo {
+  font-size: 20px;
+  font-weight: 700;
+  letter-spacing: 1px;
+  color: $light-txt-color;
+}
+
+@media (max-width: 320px) {
+  .logo {
+    font-size: 18px;
+  }
+}

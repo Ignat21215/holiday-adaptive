@@ -1,0 +1,79 @@
+@use "../utils/fonts" as *;
+@use "../utils/variables" as *;
+@use "../utils/placeholders" as *;
+
+.team {
+  padding-top: 69px;
+
+  &__title {
+    color: $titles-color;
+    font-size: 22px;
+    padding-bottom: 31px;
+    font-weight: 700;
+    padding-bottom: 72px;
+  }
+
+  &__list {
+    @extend %flex-center;
+    padding-bottom: 37px;
+    gap: 35px;
+
+    &-item {
+      max-width: 194px;
+    }
+
+    &-title {
+      font-size: 14px;
+      font-weight: 700;
+      padding-bottom: 13px;
+      padding-top: 16px;
+      position: relative;
+    }
+
+    &-desc {
+      font-weight: 300;
+      font-family: $second-family;
+      color: $dark-txt-color;
+      font-size: 14px;
+    }
+  }
+}
+
+.button--bg {
+  padding: 13px 17px;
+  border: 2px solid $red-txt-color;
+  background: none;
+  color: $red-txt-color;
+  font-size: 14px;
+  font-weight: 700;
+  border-radius: 32px;
+}
+
+@media (max-width: 768px) {
+  .team {
+    padding-top: 66px;
+    padding-bottom: 39px;
+
+    &__list {
+      flex-wrap: wrap;
+      gap: 51px;
+      padding-bottom: 38px;
+    }
+
+    &__item {
+      width: 50%;
+      padding: 0;
+    }
+  }
+}
+
+@media (max-width: 320px) {
+  .team {
+    padding-top: 60px;
+    padding-bottom: 56px;
+
+    &__list {
+      gap: 27px;
+    }
+  }
+}

@@ -2,7 +2,6 @@
 @use '../utils/variables' as *;
 
 body {
-    text-align: center;
     font-family: $font-family;
     letter-spacing: 0;
 }
@@ -10,4 +9,16 @@ body {
 .container {
     width: 914px;
     margin: 0 auto;
+}
+
+@media (max-width: 768px) {
+    .container {
+        max-width: 670px;
+    }
+}
+
+@media (max-width: 320px) {
+    .container {
+        max-width: 283px;
+    }
 }

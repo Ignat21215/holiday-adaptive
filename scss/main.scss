@@ -1,6 +1,10 @@
-@use './utils/variables' as *;
-@use '../utils/fonts' as *;
-@use '../base/reset' as *;
-@use '../base/base' as *;
-@use '../components/header' as *;
-@use '../components/hero' as *;
+@use './utils/variables';
+@use './utils/fonts';
+@use './base/reset';
+@use "./utils/placeholders";
+@use './base/base';
+@use './components/header';
+@use './components/hero';
+@use './components/team';
+@use './components/logo';
+@use './components/authorization';

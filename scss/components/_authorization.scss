@@ -1,0 +1,34 @@
+@use "../utils/fonts" as *;
+@use "../utils/variables" as *;
+@use "../utils/placeholders" as *;
+
+.authorization {
+  @extend %flex-center;
+  gap: 18px;
+
+  &__link {
+    font-size: 14px;
+    font-weight: 700;
+    color: $light-txt-color;
+  }
+
+  &__link--border {
+    padding: 8px 16px;
+    border: 2px solid $light-txt-color;
+    border-radius: 16px;
+  }
+}
+
+@media (max-width: 768px) {
+  .authorization {
+    &__link--border {
+      padding: 11px 5px;
+    }
+  }
+}
+
+@media (max-width: 320px) {
+    .authorization {
+        gap: 5px;
+    }
+}
