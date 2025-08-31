@@ -1,0 +1,64 @@
+@use "../utils/fonts" as *;
+@use "../utils/variables" as *;
+@use "../utils/placeholders" as *;
+
+.partner {
+  max-width: 194px;
+
+  &__title {
+    font-size: 14px;
+    font-weight: 700;
+    padding-bottom: 13px;
+    padding-top: 16px;
+    position: relative;
+  }
+
+  &__desc {
+    font-weight: 300;
+    font-family: $second-family;
+    color: $dark-txt-color;
+    font-size: 14px;
+  }
+
+  &__icon {
+    position: relative;
+
+    &::before {
+      content: "";
+      position: absolute;
+      width: 36px;
+      height: 36px;
+      top: 0;
+      right: 0;
+      border: 4px solid $light-txt-color;
+      border-radius: 100%;
+      background-repeat: no-repeat;
+      background-position: center;
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .partner {
+    flex-basis: calc((100% - 50px) / 2);
+    padding: 0;
+
+    &__title {
+      padding-bottom: 31px;
+    }
+  }
+}
+
+$partner: (
+  "man": rgba(255, 78, 80, 1),
+  "lucas": rgba(255, 165, 7, 1),
+  "heather": rgba(28, 215, 173, 1),
+  "bradley": rgba(78, 115, 219, 1),
+);
+
+@each $name, $color in $partner {
+  .partner__icon--#{$name}::after {
+    background-color: #{$color};
+    background-image: url('../images/partners/#{$name}/icon.svg');
+  }
+}

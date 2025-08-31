@@ -155,7 +155,6 @@ button {
 }
 
 body {
-  text-align: center;
   font-family: "Montserrat", sans-serif;
   letter-spacing: 0;
 }
@@ -204,7 +203,7 @@ body {
     -webkit-box-direction: reverse;
         -ms-flex-direction: column-reverse;
             flex-direction: column-reverse;
-    gap: 112px;
+    gap: 123px;
     top: 20px;
   }
 }
@@ -217,13 +216,19 @@ body {
   padding-bottom: 246px;
   height: 100vh;
 }
+.hero__container {
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
 .hero__title {
   font-size: 52px;
   padding-bottom: 36px;
   color: rgb(255, 255, 255);
   font-weight: 700;
   width: 508px;
-  margin: 0 auto;
+  text-transform: uppercase;
 }
 .hero__desc {
   font-family: "Roboto", sans-serif;
@@ -231,16 +236,6 @@ body {
   font-size: 24px;
   padding-bottom: 33px;
   color: rgb(255, 255, 255);
-}
-
-.button {
-  background-color: rgb(255, 78, 80);
-  color: rgb(255, 255, 255);
-  border: 0;
-  border-radius: 16px;
-  padding: 10px 16px;
-  font-weight: 700;
-  font-size: 14px;
 }
 
 @media (max-width: 768px) {
@@ -260,16 +255,15 @@ body {
   .hero__title {
     font-size: 30px;
     text-align: center;
+    width: 306px;
   }
   .hero__desc {
     font-size: 18px;
   }
-  .button {
-    padding: 13px 38px;
-  }
 }
 .team {
   padding-top: 69px;
+  padding-bottom: 72px;
 }
 .team__title {
   color: rgb(51, 51, 51);
@@ -277,36 +271,11 @@ body {
   padding-bottom: 31px;
   font-weight: 700;
   padding-bottom: 72px;
+  text-align: center;
 }
 .team__list {
   padding-bottom: 37px;
   gap: 35px;
-}
-.team__list-item {
-  max-width: 194px;
-}
-.team__list-title {
-  font-size: 14px;
-  font-weight: 700;
-  padding-bottom: 13px;
-  padding-top: 16px;
-  position: relative;
-}
-.team__list-desc {
-  font-weight: 300;
-  font-family: "Roboto", sans-serif;
-  color: rgb(102, 102, 102);
-  font-size: 14px;
-}
-
-.button--bg {
-  padding: 13px 17px;
-  border: 2px solid rgb(255, 78, 80);
-  background: none;
-  color: rgb(255, 78, 80);
-  font-size: 14px;
-  font-weight: 700;
-  border-radius: 32px;
 }
 
 @media (max-width: 768px) {
@@ -319,10 +288,6 @@ body {
         flex-wrap: wrap;
     gap: 51px;
     padding-bottom: 38px;
-  }
-  .team__item {
-    width: 50%;
-    padding: 0;
   }
 }
 @media (max-width: 320px) {
@@ -369,4 +334,103 @@ body {
   .authorization {
     gap: 5px;
   }
+}
+.button {
+  background-color: rgb(255, 78, 80);
+  color: rgb(255, 255, 255);
+  border: 0;
+  border-radius: 16px;
+  padding: 10px 16px;
+  font-weight: 700;
+  font-size: 14px;
+}
+.button:hover {
+  color: rgb(255, 78, 80);
+  background-color: rgb(255, 255, 255);
+}
+
+.button--bg {
+  padding: 13px 17px;
+  border: 2px solid rgb(255, 78, 80);
+  background: none;
+  color: rgb(255, 78, 80);
+  font-size: 14px;
+  font-weight: 700;
+  border-radius: 32px;
+}
+.button--bg:hover {
+  background-color: rgb(255, 78, 80);
+  color: rgb(255, 255, 255);
+}
+
+@media (max-width: 768px) {
+  .button {
+    padding: 12px 10px;
+  }
+}
+@media (max-width: 320px) {
+  .button {
+    padding: 13px 38px;
+  }
+}
+.partner {
+  max-width: 194px;
+}
+.partner__title {
+  font-size: 14px;
+  font-weight: 700;
+  padding-bottom: 13px;
+  padding-top: 16px;
+  position: relative;
+}
+.partner__desc {
+  font-weight: 300;
+  font-family: "Roboto", sans-serif;
+  color: rgb(102, 102, 102);
+  font-size: 14px;
+}
+.partner__icon {
+  position: relative;
+}
+.partner__icon::before {
+  content: "";
+  position: absolute;
+  width: 36px;
+  height: 36px;
+  top: 0;
+  right: 0;
+  border: 4px solid rgb(255, 255, 255);
+  border-radius: 100%;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+@media (max-width: 768px) {
+  .partner {
+    -ms-flex-preferred-size: calc((100% - 50px) / 2);
+        flex-basis: calc((100% - 50px) / 2);
+    padding: 0;
+  }
+  .partner__title {
+    padding-bottom: 31px;
+  }
+}
+.partner__icon--man::after {
+  background-color: rgb(255, 78, 80);
+  background-image: url("../images/partners/man/icon.svg");
+}
+
+.partner__icon--lucas::after {
+  background-color: rgb(255, 165, 7);
+  background-image: url("../images/partners/lucas/icon.svg");
+}
+
+.partner__icon--heather::after {
+  background-color: rgb(28, 215, 173);
+  background-image: url("../images/partners/heather/icon.svg");
+}
+
+.partner__icon--bradley::after {
+  background-color: rgb(78, 115, 219);
+  background-image: url("../images/partners/bradley/icon.svg");
 }

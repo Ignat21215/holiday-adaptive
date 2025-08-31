@@ -1,0 +1,45 @@
+@use "../utils/fonts" as *;
+@use "../utils/variables" as *;
+@use "../utils/placeholders" as *;
+
+.button {
+  background-color: $red-txt-color;
+  color: $light-txt-color;
+  border: 0;
+  border-radius: 16px;
+  padding: 10px 16px;
+  font-weight: 700;
+  font-size: 14px;
+
+  &:hover {
+    color: $red-txt-color;
+    background-color: $light-txt-color;
+  }
+}
+
+.button--bg {
+  padding: 13px 17px;
+  border: 2px solid $red-txt-color;
+  background: none;
+  color: $red-txt-color;
+  font-size: 14px;
+  font-weight: 700;
+  border-radius: 32px;
+
+  &:hover {
+    background-color: $red-txt-color;
+    color: $light-txt-color;
+  }
+}
+
+@media (max-width: 768px) {
+  .button {
+    padding: 12px 10px;
+  }
+}
+
+@media (max-width: 320px) {
+  .button {
+    padding: 13px 38px;
+  }
+}
