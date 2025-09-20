@@ -25,6 +25,8 @@
   font-size: 14px;
   font-weight: 700;
   border-radius: 32px;
+  margin: 0 auto;
+  display: block;
 
   &:hover {
     background-color: $red-txt-color;

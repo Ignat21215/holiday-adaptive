@@ -2,7 +2,7 @@
 @use "../utils/variables" as *;
 
 .hero {
-  background-image: url(../images/bg.jpg);
+  background-image: url(../images/hero-bg@3x.webp);
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
@@ -10,45 +10,63 @@
   padding-bottom: 246px;
   height: 100vh;
   @extend %flex-center !optional;
+  @media (min-device-pixel-ratio: 2),
+    (-webkit-min-device-pixel-ratio: 2),
+    (min-resolution: 192dpi),
+    (min-resolution: 2dppx) {
+    .hero {
+      background-image: url("../images/hero-bg@3x.webp");
+    }
 
-  &__container {
-    @extend %flex-center !optional;
-    flex-direction: column;
-  }
+    &__container {
+      @extend %flex-center !optional;
+      flex-direction: column;
+    }
 
-  &__title {
-    font-size: 52px;
-    padding-bottom: 36px;
-    color: $light-txt-color;
-    font-weight: 700;
-    width: 508px;
-    text-transform: uppercase;
-  }
+    &__title {
+      font-size: 52px;
+      padding-bottom: 36px;
+      color: $light-txt-color;
+      font-weight: 700;
+      width: 508px;
+      text-transform: uppercase;
+    }
 
-  &__desc {
-    font-family: $second-family;
-    font-weight: 300;
-    font-size: 24px;
-    padding-bottom: 33px;
-    color: $light-txt-color;
+    &__desc {
+      font-family: $second-family;
+      font-weight: 300;
+      font-size: 24px;
+      padding-bottom: 33px;
+      color: $light-txt-color;
+    }
   }
 }
-
 @media (max-width: 768px) {
   .hero {
     padding-top: 125px;
     padding-bottom: 233px;
+    background-image: url("../images/hero-bg@2x.webp");
   }
 
   .button {
     padding: 12px 10px;
   }
+
+  @media (min-device-pixel-ratio: 2),
+    (-webkit-min-device-pixel-ratio: 2),
+    (min-resolution: 192dpi),
+    (min-resolution: 2dppx) {
+    .hero {
+      background-image: url("../images/hero-bg@3x.webp");
+    }
+  }
 }
 
 @media (max-width: 320px) {
   .hero {
-    padding-top: 22px;
+    padding-top: 214px;
     padding-bottom: 138px;
+    background-image: url("../images/hero-bg.webp");
 
     &__title {
       font-size: 30px;
@@ -58,6 +76,15 @@
 
     &__desc {
       font-size: 18px;
+    }
+  }
+
+  @media (min-device-pixel-ratio: 2),
+    (-webkit-min-device-pixel-ratio: 2),
+    (min-resolution: 192dpi),
+    (min-resolution: 2dppx) {
+    .hero {
+      background-image: url("../images/hero-bg@2x.webp");
     }
   }
 }
