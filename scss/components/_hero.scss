@@ -17,28 +17,28 @@
     .hero {
       background-image: url("../images/hero-bg@3x.webp");
     }
+  }
 
-    &__container {
-      @extend %flex-center !optional;
-      flex-direction: column;
-    }
+  &__container {
+    @extend %flex-center !optional;
+    flex-direction: column;
+  }
 
-    &__title {
-      font-size: 52px;
-      padding-bottom: 36px;
-      color: $light-txt-color;
-      font-weight: 700;
-      width: 508px;
-      text-transform: uppercase;
-    }
+  &__title {
+    font-size: 52px;
+    padding-bottom: 36px;
+    color: $light-txt-color;
+    font-weight: 700;
+    width: 508px;
+    text-transform: uppercase;
+  }
 
-    &__desc {
-      font-family: $second-family;
-      font-weight: 300;
-      font-size: 24px;
-      padding-bottom: 33px;
-      color: $light-txt-color;
-    }
+  &__desc {
+    font-family: $second-family;
+    font-weight: 300;
+    font-size: 24px;
+    padding-bottom: 33px;
+    color: $light-txt-color;
   }
 }
 @media (max-width: 768px) {

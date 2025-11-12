@@ -218,29 +218,29 @@ body {
 }
 @media (min-device-pixel-ratio: 2), (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
   .hero .hero {
-    background-image: url("../images/hero-bg@2x.webp");
+    background-image: url("../images/hero-bg@3x.webp");
   }
-  .hero__container {
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-  }
-  .hero__title {
-    font-size: 52px;
-    padding-bottom: 36px;
-    color: rgb(255, 255, 255);
-    font-weight: 700;
-    width: 508px;
-    text-transform: uppercase;
-  }
-  .hero__desc {
-    font-family: "Roboto", sans-serif;
-    font-weight: 300;
-    font-size: 24px;
-    padding-bottom: 33px;
-    color: rgb(255, 255, 255);
-  }
+}
+.hero__container {
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+.hero__title {
+  font-size: 52px;
+  padding-bottom: 36px;
+  color: rgb(255, 255, 255);
+  font-weight: 700;
+  width: 508px;
+  text-transform: uppercase;
+}
+.hero__desc {
+  font-family: "Roboto", sans-serif;
+  font-weight: 300;
+  font-size: 24px;
+  padding-bottom: 33px;
+  color: rgb(255, 255, 255);
 }
 
 @media (max-width: 768px) {
@@ -262,7 +262,7 @@ body {
   .hero {
     padding-top: 214px;
     padding-bottom: 138px;
-    background-image: url("../images/hero-bg@3x.webp");
+    background-image: url("../images/hero-bg.webp");
   }
   .hero__title {
     font-size: 30px;
@@ -275,7 +275,7 @@ body {
 }
 @media (max-width: 320px) and (min-device-pixel-ratio: 2), (max-width: 320px) and (-webkit-min-device-pixel-ratio: 2), (max-width: 320px) and (min-resolution: 192dpi), (max-width: 320px) and (min-resolution: 2dppx) {
   .hero {
-    background-image: url("../images/hero-bg@3x.webp");
+    background-image: url("../images/hero-bg@2x.webp");
   }
 }
 .team {
