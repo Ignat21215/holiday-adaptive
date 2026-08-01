@@ -142,7 +142,7 @@ button {
   font-family: inherit;
 }
 
-.authorization, .team__list {
+.authorization, .team__list, .hero, .hero__container {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -234,6 +234,7 @@ body {
   font-weight: 700;
   width: 508px;
   text-transform: uppercase;
+  text-align: center;
 }
 .hero__desc {
   font-family: "Roboto", sans-serif;
@@ -241,6 +242,7 @@ body {
   font-size: 24px;
   padding-bottom: 33px;
   color: rgb(255, 255, 255);
+  text-align: center;
 }
 
 @media (max-width: 768px) {
@@ -291,6 +293,9 @@ body {
   text-align: center;
 }
 .team__list {
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
   padding-bottom: 37px;
   gap: 35px;
 }
@@ -344,12 +349,12 @@ body {
 
 @media (max-width: 768px) {
   .authorization__link--border {
-    padding: 11px 5px;
+    padding: 8px 11px;
   }
 }
 @media (max-width: 320px) {
   .authorization {
-    gap: 5px;
+    gap: 15px;
   }
 }
 .button {

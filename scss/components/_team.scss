@@ -17,6 +17,7 @@
 
   &__list {
     @extend %flex-center;
+    align-items: flex-start;
     padding-bottom: 37px;
     gap: 35px;
   }

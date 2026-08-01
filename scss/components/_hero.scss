@@ -1,5 +1,6 @@
 @use "../utils/fonts" as *;
 @use "../utils/variables" as *;
+@use "../utils/placeholders" as *;
 
 .hero {
   background-image: url(../images/hero-bg@3x.webp);
@@ -9,7 +10,7 @@
   padding-top: 125px;
   padding-bottom: 246px;
   height: 100vh;
-  @extend %flex-center !optional;
+  @extend %flex-center;
   @media (min-device-pixel-ratio: 2),
     (-webkit-min-device-pixel-ratio: 2),
     (min-resolution: 192dpi),
@@ -20,7 +21,7 @@
   }
 
   &__container {
-    @extend %flex-center !optional;
+    @extend %flex-center;
     flex-direction: column;
   }
 
@@ -31,6 +32,7 @@
     font-weight: 700;
     width: 508px;
     text-transform: uppercase;
+    text-align: center;
   }
 
   &__desc {
@@ -39,6 +41,7 @@
     font-size: 24px;
     padding-bottom: 33px;
     color: $light-txt-color;
+    text-align: center;
   }
 }
 @media (max-width: 768px) {
