@@ -9,7 +9,6 @@
   background-repeat: no-repeat;
   padding-top: 125px;
   padding-bottom: 246px;
-  height: 100vh;
   @extend %flex-center;
   @media (min-device-pixel-ratio: 2),
     (-webkit-min-device-pixel-ratio: 2),
@@ -30,7 +29,7 @@
     padding-bottom: 36px;
     color: $light-txt-color;
     font-weight: 700;
-    width: 508px;
+    max-width: 508px;
     text-transform: uppercase;
     text-align: center;
   }
@@ -74,7 +73,7 @@
     &__title {
       font-size: 30px;
       text-align: center;
-      width: 306px;
+      max-width: 306px;
     }
 
     &__desc {

@@ -160,7 +160,7 @@ body {
 }
 
 .container {
-  width: 914px;
+  max-width: 914px;
   margin: 0 auto;
 }
 
@@ -188,6 +188,7 @@ body {
       -ms-flex-align: center;
           align-items: center;
   position: absolute;
+  width: 100%;
   top: 36px;
   left: 50%;
   -webkit-transform: translateX(-50%);
@@ -214,7 +215,6 @@ body {
   background-repeat: no-repeat;
   padding-top: 125px;
   padding-bottom: 246px;
-  height: 100vh;
 }
 @media (min-device-pixel-ratio: 2), (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
   .hero .hero {
@@ -232,7 +232,7 @@ body {
   padding-bottom: 36px;
   color: rgb(255, 255, 255);
   font-weight: 700;
-  width: 508px;
+  max-width: 508px;
   text-transform: uppercase;
   text-align: center;
 }
@@ -269,7 +269,7 @@ body {
   .hero__title {
     font-size: 30px;
     text-align: center;
-    width: 306px;
+    max-width: 306px;
   }
   .hero__desc {
     font-size: 18px;
